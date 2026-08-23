@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikeGlide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/bikes.css">
+    <link rel="stylesheet" href="css/how-it-works.css">
+    <link rel="stylesheet" href="css/cities.css">
+    <link rel="stylesheet" href="css/testimonials.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="home.html" class="nav-logo">BikeGlide</a>
+
+            <button type="button" id="nav-hamburger-btn" class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-center">
+                    <a href="home.html" class="active">Home</a>
+                    <a href="pages/bikes.html">Browse Bikes</a>
+                    <a href="pages/about.html">About Us</a>
+                    <a href="pages/contact.html">Contact</a>
+                </div>
+                <div class="nav-right">
+                    <a href="pages/signin.html" class="nav-signin">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero" id="home">
+            <img src="images/hero-bg.png" alt="Motorcycle on a scenic Indian road" class="hero-bg">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1>Reliable Rides for Every Journey.</h1>
+                <p>Experience the freedom of the road with India's most trusted bike rental service. Clean, maintained, and ready to go.</p>
+                <a href="pages/bikes.html" class="hero-btn">Browse Bikes</a>
+            </div>
+        </section>
+
+        <section class="featured-bikes" id="bikes">
+            <div class="container">
+                <header class="header-block">
+                    <h2 class="section-title">Featured Bikes</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Discover our most popular rides, perfectly maintained for your next adventure or daily commute.</p>
+                </header>
+
+                <div class="bikes-grid">
+
+                    <article class="bike-card">
+                        <div class="bike-img">
+                            <img src="images/honda-activa.png" alt="Honda Activa 6G scooter">
+                        </div>
+                        <div class="bike-info">
+                            <h3>Honda Activa 6G</h3>
+                            <div class="bike-type">
+                                <span class="type-tag">Scooter</span>
+                            </div>
+                            <div class="bike-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Engine</span>
+                                    <span class="spec-value">110 CC</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value">45 kmpl</span>
+                                </div>
+                            </div>
+                            <a href="pages/bikes.html" class="book-btn">Book Now</a>
+                        </div>
+                    </article>
+
+                    <article class="bike-card">
+                        <div class="bike-img">
+                            <img src="images/royal-enfield.png" alt="Royal Enfield Classic 350 cruiser">
+                        </div>
+                        <div class="bike-info">
+                            <h3>Royal Enfield Classic</h3>
+                            <div class="bike-type">
+                                <span class="type-tag">Cruiser</span>
+                            </div>
+                            <div class="bike-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Engine</span>
+                                    <span class="spec-value">350 CC</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value">35 kmpl</span>
+                                </div>
+                            </div>
+                            <a href="pages/bikes.html" class="book-btn">Book Now</a>
+                        </div>
+                    </article>
+
+                    <article class="bike-card">
+                        <div class="bike-img">
+                            <img src="images/yamaha-fz.png" alt="Bajaj Pulsar 150 commuter bike">
+                        </div>
+                        <div class="bike-info">
+                            <h3>Bajaj Pulsar 150</h3>
+                            <div class="bike-type">
+                                <span class="type-tag">Commuter</span>
+                            </div>
+                            <div class="bike-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Engine</span>
+                                    <span class="spec-value">150 CC</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value">50 kmpl</span>
+                                </div>
+                            </div>
+                            <a href="pages/bikes.html" class="book-btn">Book Now</a>
+                        </div>
+                    </article>
+
+                    <article class="bike-card">
+                        <div class="bike-img">
+                            <img src="images/ktm-duke.png" alt="KTM Duke 200 sports bike">
+                        </div>
+                        <div class="bike-info">
+                            <h3>KTM Duke 200</h3>
+                            <div class="bike-type">
+                                <span class="type-tag">Sports</span>
+                            </div>
+                            <div class="bike-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Engine</span>
+                                    <span class="spec-value">200 CC</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value">35 kmpl</span>
+                                </div>
+                            </div>
+                            <a href="pages/bikes.html" class="book-btn">Book Now</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="combined-section" id="how-it-works">
+            <div class="container">
+                <div class="combined-grid">
+
+                    <div class="steps-col">
+                        <h2>How It Works</h2>
+
+                        <div class="step-item">
+                            <div class="step-text">
+                                <h3>Find Your Ride</h3>
+                                <p>Search by location and date to see available bikes near you.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-text">
+                                <h3>Book &amp; Pay Securely</h3>
+                                <p>Complete your reservation with our transparent, secure checkout process.</p>
+                            </div>
+                        </div>
+
+                        <div class="step-item">
+                            <div class="step-text">
+                                <h3>Unlock &amp; Go</h3>
+                                <p>Pick up your bike at the hub, or use the app for instant unlock.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="why-card" id="about-preview">
+                        <h2>Why BikeGlide?</h2>
+
+                        <div class="why-item">
+                            <h4><span class="why-dot"></span> Certified Maintenance</h4>
+                            <p>Every bike undergoes a rigorous 20-point safety check before every rental.</p>
+                        </div>
+
+                        <div class="why-item">
+                            <h4><span class="why-dot"></span> Comprehensive Insurance</h4>
+                            <p>Ride with peace of mind knowing you're fully covered on the road.</p>
+                        </div>
+
+                        <div class="why-item">
+                            <h4><span class="why-dot"></span> 24/7 Roadside Assistance</h4>
+                            <p>Our support team is always just a call away, day or night.</p>
+                        </div>
+
+                        <div class="why-stat">
+                            <div class="why-text">
+                                <h3>99.8%</h3>
+                                <span>Uptime Reliability</span>
+                            </div>
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-cities" id="cities">
+            <div class="container">
+                <header class="header-block">
+                    <h2 class="section-title">Popular Cities</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">We're available in 5+ cities across India</p>
+                </header>
+
+                <ul class="cities-grid">
+
+                    <li class="city-card">
+                        <img src="images/chandigarh.png" alt="Chandigarh city skyline" class="city-img">
+                        <div class="scrim-layer"></div>
+                        <div class="city-text">
+                            <h3 class="city-label">Chandigarh</h3>
+                            <span class="inventory-metric">Bikes available: 5+</span>
+                        </div>
+                    </li>
+
+                    <li class="city-card">
+                        <img src="images/mohali.jpg" alt="Mohali city view" class="city-img">
+                        <div class="scrim-layer"></div>
+                        <div class="city-text">
+                            <h3 class="city-label">Mohali</h3>
+                            <span class="inventory-metric">Bikes available: 15+</span>
+                        </div>
+                    </li>
+
+                    <li class="city-card">
+                        <img src="images/delhi.png" alt="Delhi city view" class="city-img">
+                        <div class="scrim-layer"></div>
+                        <div class="city-text">
+                            <h3 class="city-label">Delhi</h3>
+                            <span class="inventory-metric">Bikes available: 8+</span>
+                        </div>
+                    </li>
+
+                    <li class="city-card">
+                        <img src="images/manali.png" alt="Manali mountain landscape" class="city-img">
+                        <div class="scrim-layer"></div>
+                        <div class="city-text">
+                            <h3 class="city-label">Manali</h3>
+                            <span class="inventory-metric">Bikes available: 6+</span>
+                        </div>
+                    </li>
+
+                    <li class="city-card">
+                        <img src="images/goa.png" alt="Goa beach landscape" class="city-img">
+                        <div class="scrim-layer"></div>
+                        <div class="city-text">
+                            <h3 class="city-label">Goa</h3>
+                            <span class="inventory-metric">Bikes available: 15+</span>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <header class="header-block">
+                    <h2 class="section-title">What Riders Say</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Thousands of happy riders across India trust BikeGlide every day.</p>
+                </header>
+
+                <div class="testimonials-grid">
+
+                    <article class="testimonial-card">
+                        <div class="rating-stars">
+                            <span class="star-badge">★ 5.0</span>
+                            <span class="rating-label">Excellent</span>
+                        </div>
+                        <p class="review-text">"Rented a Royal Enfield for my Manali trip — the bike was spotless and well-maintained. The pickup was seamless. Highly recommend BikeGlide!"</p>
+                        <div class="reviewer-meta">
+                            <div class="avatar-circle" aria-hidden="true">AR</div>
+                            <div class="reviewer-details">
+                                <span class="reviewer-name">Arjun Rawat</span>
+                                <span class="reviewer-location">Delhi</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="rating-stars">
+                            <span class="star-badge">★ 4.8</span>
+                            <span class="rating-label">Excellent</span>
+                        </div>
+                        <p class="review-text">"Used the Honda Activa for my daily commute in Chandigarh for a week. Super affordable, easy booking, and great customer service."</p>
+                        <div class="reviewer-meta">
+                            <div class="avatar-circle" aria-hidden="true">PS</div>
+                            <div class="reviewer-details">
+                                <span class="reviewer-name">Priya Sharma</span>
+                                <span class="reviewer-location">Chandigarh</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <div class="rating-stars">
+                            <span class="star-badge">★ 5.0</span>
+                            <span class="rating-label">Excellent</span>
+                        </div>
+                        <p class="review-text">"Exploring Goa on a KTM Duke was an unforgettable experience. The 24/7 support gave me confidence throughout my ride. Will book again!"</p>
+                        <div class="reviewer-meta">
+                            <div class="avatar-circle" aria-hidden="true">KM</div>
+                            <div class="reviewer-details">
+                                <span class="reviewer-name">Karan Mehta</span>
+                                <span class="reviewer-location">Goa</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer" id="contact-footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="brand-block">
+                    <p class="footer-brand">BikeGlide</p>
+                    <p class="footer-tagline">India's trusted two-wheeler rental platform. Ride clean, ride safe.</p>
+                </div>
+
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <a href="home.html">Home</a>
+                        <a href="pages/bikes.html">Browse Bikes</a>
+                        <a href="pages/about.html">About Us</a>
+                        <a href="pages/contact.html">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Account</h4>
+                        <a href="pages/signin.html">Sign In</a>
+                        <a href="pages/signin.html">Sign Up</a>
+                        <a href="pages/logout.html">Logout</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Cities</h4>
+                        <a href="pages/bikes.html">Chandigarh</a>
+                        <a href="pages/bikes.html">Delhi</a>
+                        <a href="pages/bikes.html">Goa</a>
+                        <a href="pages/bikes.html">Manali</a>
+                    </div>
+                </nav>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 BikeGlide Technologies Pvt. Ltd. &mdash; Academic Project &mdash; Team 21, Chitkara University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

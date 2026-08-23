@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikeGlide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="../home.html" class="nav-logo">BikeGlide</a>
+
+            <button type="button" id="nav-hamburger-btn" class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-center">
+                    <a href="../home.html">Home</a>
+                    <a href="bikes.html">Browse Bikes</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html" class="active">Contact</a>
+                </div>
+                <div class="nav-right">
+                    <a href="signin.html" class="nav-signin">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-main">
+
+        <header class="page-hero">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Have a question about rentals, availability, or your next ride? We're here to help.</p>
+            </div>
+        </header>
+
+        <section class="section-padded" aria-label="Contact form and information">
+            <div class="container">
+                <div class="contact-grid">
+
+                    <div class="contact-form">
+                        <h2>Send us a message</h2>
+                        <p class="form-intro">
+                            Fill out the form below and our team will get back to you within 24 hours.
+                        </p>
+
+                        <form class="auth-form" action="#" method="post" novalidate>
+
+                            <fieldset>
+                                <legend>Your Details</legend>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="full-name">Full Name</label>
+                                        <input
+                                            type="text"
+                                            id="full-name"
+                                            name="full_name"
+                                            placeholder="Your full name"
+                                            required
+                                            minlength="3"
+                                            autocomplete="name"
+                                        >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            placeholder="you@example.com"
+                                            required
+                                            autocomplete="email"
+                                        >
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input
+                                            type="tel"
+                                            id="phone"
+                                            name="phone"
+                                            placeholder="+91 XXXXX XXXXX"
+                                            autocomplete="tel"
+                                        >
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-reason">Contact Reason</label>
+                                        <select id="contact-reason" name="contact_reason" required>
+                                            <option value="" disabled selected>Select a reason</option>
+                                            <option value="booking">Booking Enquiry</option>
+                                            <option value="availability">Bike Availability</option>
+                                            <option value="pricing">Pricing &amp; Plans</option>
+                                            <option value="support">Technical Support</option>
+                                            <option value="feedback">Feedback</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+
+                            <fieldset>
+                                <legend>Your Message</legend>
+
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        name="subject"
+                                        placeholder="Brief subject of your message"
+                                        required
+                                        maxlength="100"
+                                    >
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        placeholder="Describe your query in detail..."
+                                        required
+                                        minlength="20"
+                                        maxlength="1000"
+                                    ></textarea>
+                                </div>
+
+                            </fieldset>
+
+                            <button type="submit" class="auth-btn">Send Message</button>
+
+                        </form>
+                    </div>
+                    <aside aria-label="Contact information">
+                        <div class="info-col">
+
+                            <div class="info-card">
+                                <div class="contact-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                         stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="mailto:support@bikeglide.example">support@bikeglide.example</a>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="contact-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                         stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+91 98765 43210</p>
+                                </div>
+                            </div>
+
+                            <div class="info-card">
+                                <div class="contact-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor"
+                                         stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Chandigarh, India</p>
+                                </div>
+                            </div>
+
+                            <p class="availability-note">
+                                <strong>Support hours:</strong> Our team is available
+                                Monday – Saturday, 9 AM to 6 PM IST.
+                                For urgent roadside assistance, call our 24/7 helpline.
+                            </p>
+
+                        </div>
+                    </aside>
+                    </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="brand-block">
+                    <p class="footer-brand">BikeGlide</p>
+                    <p class="footer-tagline">India's trusted two-wheeler rental platform. Ride clean, ride safe.</p>
+                </div>
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <a href="../home.html">Home</a>
+                        <a href="bikes.html">Browse Bikes</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Account</h4>
+                        <a href="signin.html">Sign In</a>
+                        <a href="signin.html">Sign Up</a>
+                        <a href="logout.html">Logout</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Cities</h4>
+                        <a href="bikes.html">Chandigarh</a>
+                        <a href="bikes.html">Delhi</a>
+                        <a href="bikes.html">Goa</a>
+                        <a href="bikes.html">Manali</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BikeGlide Technologies Pvt. Ltd. &mdash; Academic Project &mdash; Team 21, Chitkara University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+.combined-section {
+    padding: 44px 0;
+    background: #110703;
+}
+
+.combined-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.steps-col h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.step-item:last-child {
+    border-bottom: none;
+}
+
+.step-icon {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-icon.blue {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+}
+
+.step-icon.purple {
+    background: rgba(124, 58, 237, 0.15);
+    color: #a78bfa;
+}
+
+.step-icon.orange {
+    background: rgba(217, 119, 6, 0.15);
+    color: #fbbf24;
+}
+
+.step-text h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.step-text p {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.why-card {
+    background: #121212;
+    border-radius: 16px;
+    padding: 26px 20px;
+    color: #ffffff;
+    box-shadow: 0 16px 45px rgba(26, 35, 50, 0.15);
+}
+
+.why-card h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 22px;
+}
+
+.why-item {
+    margin-bottom: 22px;
+}
+
+.why-item h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.why-dot {
+    width: 7px;
+    height: 7px;
+    min-width: 7px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.why-item p {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    line-height: 1.5;
+    padding-left: 17px;
+}
+
+.why-stat {
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.why-text h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.why-text span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(67, 40, 24, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: rgba(67, 40, 24, 0.1);
+}
+
+@media (min-width: 768px) {
+    .combined-section {
+        padding: 70px 0;
+    }
+
+    .steps-col h2 {
+        font-size: 1.8rem;
+    }
+
+    .why-card {
+        padding: 36px 28px;
+        border-radius: 18px;
+    }
+
+    .why-text h3 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .combined-section {
+        padding: 90px 0;
+    }
+
+    .combined-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .steps-col h2 {
+        font-size: 2rem;
+    }
+
+    .why-card {
+        padding: 44px 36px;
+        border-radius: 20px;
+    }
+
+    .why-card h2 {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    .why-text h3 {
+        font-size: 2.4rem;
+    }
+}

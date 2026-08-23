@@ -1,0 +1,115 @@
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 48px 0;
+}
+
+.contact-form {
+    background: #121212;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 32px 24px;
+}
+
+.contact-form h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.contact-form .form-intro {
+    font-size: 0.88rem;
+    color: #64748b;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-card {
+    background: #121212;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 24px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.contact-icon {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.info-card h4 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 4px;
+}
+
+.info-card p,
+.info-card a {
+    font-size: 0.88rem;
+    color: #e2e8f0;
+    line-height: 1.5;
+    transition: color 0.2s ease;
+}
+
+.info-card a:hover {
+    color: #ffffff;
+}
+
+.availability-note {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 16px 18px;
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-top: 4px;
+}
+
+.availability-note strong {
+    color: #94a3b8;
+}
+
+@media (min-width: 768px) {
+    .contact-form {
+        padding: 40px 32px;
+    }
+
+    .contact-form h2 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 3fr 2fr;
+        gap: 40px;
+    }
+}

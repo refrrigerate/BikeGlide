@@ -1,0 +1,165 @@
+.mission-block {
+    padding: 48px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.mission-text {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #e2e8f0;
+    line-height: 1.75;
+    max-width: 720px;
+}
+
+.mission-text strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 48px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    align-items: start;
+}
+
+.about-text h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 14px;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+}
+
+.about-text p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.values-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.values-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.value-dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    background: #ffffff;
+    border-radius: 50%;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.values-list h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.values-list p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.commitment-card {
+    background: #121212;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 32px 24px;
+}
+
+.commitment-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.commitment-card p {
+    font-size: 0.88rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.commitment-card p:last-child {
+    margin-bottom: 0;
+}
+
+.vision-band {
+    background: #121212;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 48px 0;
+    text-align: center;
+}
+
+.vision-band h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 14px;
+    letter-spacing: -0.3px;
+}
+
+.vision-band p {
+    font-size: 0.92rem;
+    color: #94a3b8;
+    line-height: 1.7;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .mission-text {
+        font-size: 1.25rem;
+    }
+
+    .about-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .vision-band h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+    }
+
+    .mission-text {
+        font-size: 1.3rem;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .vision-band h2 {
+        font-size: 2rem;
+    }
+}

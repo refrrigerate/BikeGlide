@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BikeGlide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="../home.html" class="nav-logo">BikeGlide</a>
+
+            <button type="button" id="nav-hamburger-btn" class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-center">
+                    <a href="../home.html">Home</a>
+                    <a href="bikes.html">Browse Bikes</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-right">
+                    <a href="signin.html" class="nav-signin">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="auth-page" aria-label="Signed out confirmation">
+
+        <section class="auth-card logout-card" aria-labelledby="logout-heading">
+
+            <div class="logout-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" stroke="#ffffff" stroke-width="2.5"
+                     fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+
+            <h1 id="logout-heading">You're Signed Out</h1>
+
+            <p>
+                You have successfully logged out of your BikeGlide account.<br>
+                Thank you for riding with BikeGlide.
+            </p>
+
+            <div class="logout-actions">
+                <a href="../home.html" class="btn-primary">Return Home</a>
+                <a href="signin.html" class="btn-secondary">Sign In Again</a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
