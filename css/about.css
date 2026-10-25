@@ -1,19 +1,24 @@
+.stats-overlap {
+    margin-top: -40px;
+    position: relative;
+}
+
 .mission-block {
-    padding: 48px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 56px 0 24px;
 }
 
 .mission-text {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 500;
-    color: #e2e8f0;
+    color: var(--text-soft);
     line-height: 1.75;
-    max-width: 720px;
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .mission-text strong {
-    color: #ffffff;
-    font-weight: 700;
+    color: var(--primary-dark);
 }
 
 .about-grid {
@@ -21,145 +26,120 @@
     grid-template-columns: 1fr;
     gap: 32px;
     padding: 48px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     align-items: start;
 }
 
 .about-text h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text);
     margin-bottom: 14px;
-    line-height: 1.2;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.4px;
 }
 
 .about-text p {
-    font-size: 0.9rem;
-    color: #94a3b8;
-    line-height: 1.7;
+    font-size: 0.93rem;
+    color: var(--text-soft);
+    line-height: 1.75;
     margin-bottom: 14px;
-}
-
-.about-text p:last-child {
-    margin-bottom: 0;
 }
 
 .values-list {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
+    margin-top: 24px;
 }
 
 .values-list li {
     display: flex;
-    align-items: flex-start;
     gap: 14px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px;
 }
 
 .value-dot {
-    width: 8px;
-    height: 8px;
-    min-width: 8px;
-    background: #ffffff;
+    width: 10px;
+    height: 10px;
+    min-width: 10px;
+    background: var(--primary);
     border-radius: 50%;
-    margin-top: 6px;
-    flex-shrink: 0;
+    margin-top: 7px;
 }
 
 .values-list h4 {
-    font-size: 0.95rem;
+    font-size: 0.97rem;
     font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 4px;
+    color: var(--text);
+    margin-bottom: 2px;
 }
 
 .values-list p {
-    font-size: 0.85rem;
-    color: #64748b;
-    line-height: 1.5;
+    font-size: 0.86rem;
+    color: var(--muted);
     margin: 0;
 }
 
 .commitment-card {
-    background: #121212;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 18px;
-    padding: 32px 24px;
+    background: var(--navy);
+    color: #cbd5e1;
+    border-radius: 20px;
+    padding: 32px 26px;
+    box-shadow: var(--shadow-lg);
 }
 
 .commitment-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
 }
 
 .commitment-card p {
-    font-size: 0.88rem;
-    color: #94a3b8;
+    font-size: 0.9rem;
     line-height: 1.7;
     margin-bottom: 12px;
 }
 
-.commitment-card p:last-child {
-    margin-bottom: 0;
-}
-
 .vision-band {
-    background: #121212;
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    padding: 48px 0;
+    background: var(--primary-soft);
+    padding: 64px 0;
     text-align: center;
 }
 
 .vision-band h2 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--text);
     margin-bottom: 14px;
-    letter-spacing: -0.3px;
 }
 
 .vision-band p {
-    font-size: 0.92rem;
-    color: #94a3b8;
-    line-height: 1.7;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-@media (min-width: 768px) {
-    .mission-text {
-        font-size: 1.25rem;
-    }
-
-    .about-text h2 {
-        font-size: 1.7rem;
-    }
-
-    .vision-band h2 {
-        font-size: 1.7rem;
-    }
+    font-size: 0.97rem;
+    color: var(--text-soft);
+    line-height: 1.75;
+    max-width: 620px;
+    margin: 0 auto 24px;
 }
 
 @media (min-width: 1024px) {
     .about-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 64px;
         align-items: center;
     }
 
-    .mission-text {
-        font-size: 1.3rem;
-    }
-
-    .about-text h2 {
-        font-size: 2rem;
-    }
-
+    .about-text h2,
     .vision-band h2 {
-        font-size: 2rem;
+        font-size: 2.1rem;
+    }
+
+    .mission-text {
+        font-size: 1.35rem;
     }
 }

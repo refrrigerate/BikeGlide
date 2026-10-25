@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BikeGlide</title>
+    <meta name="description" content="BikeGlide - rent clean, well-maintained bikes and scooters across India.">
+    <title>BikeGlide | Bike Rentals Across India</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -22,7 +23,7 @@
 
     <nav class="navbar" id="navbar">
         <div class="container">
-            <a href="home.html" class="nav-logo">BikeGlide</a>
+            <a href="home.html" class="nav-logo">Bike<span>Glide</span></a>
 
             <button type="button" id="nav-hamburger-btn" class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
@@ -34,11 +35,13 @@
                 <div class="nav-center">
                     <a href="home.html" class="active">Home</a>
                     <a href="pages/bikes.html">Browse Bikes</a>
+                    <a href="pages/list-bike.html">List Your Bike</a>
                     <a href="pages/about.html">About Us</a>
                     <a href="pages/contact.html">Contact</a>
                 </div>
                 <div class="nav-right">
                     <a href="pages/signin.html" class="nav-signin">Sign In</a>
+                    <a href="pages/signin.html#signup" class="nav-btn">Get Started</a>
                 </div>
             </div>
         </div>
@@ -47,117 +50,154 @@
     <main>
 
         <section class="hero" id="home">
-            <img src="images/hero-bg.png" alt="Motorcycle on a scenic Indian road" class="hero-bg">
+            <img src="images/hero-bg.png" alt="" class="hero-bg">
             <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1>Reliable Rides for Every Journey.</h1>
-                <p>Experience the freedom of the road with India's most trusted bike rental service. Clean, maintained, and ready to go.</p>
-                <a href="pages/bikes.html" class="hero-btn">Browse Bikes</a>
+            <div class="container hero-content">
+                <span class="hero-badge">Now in 5 cities across India</span>
+                <h1>Reliable rides for <span>every journey.</span></h1>
+                <p>Rent clean, fully-serviced bikes and scooters by the day. Transparent pricing, free helmets and 24/7 roadside help.</p>
+
+                <!-- Plain GET form: sends ?city=...&pickup=... to the bikes page -->
+                <form class="hero-search" action="pages/bikes.html" method="get">
+                    <div class="search-field">
+                        <div class="field-head">
+                            <label for="hero-city">Pickup City</label>
+                            <button type="button" class="locate-btn" id="hero-locate">📍 Use my location</button>
+                        </div>
+                        <select id="hero-city" name="city">
+                            <option value="all">All cities</option>
+                            <option value="chandigarh">Chandigarh</option>
+                            <option value="mohali">Mohali</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="manali">Manali</option>
+                            <option value="goa">Goa</option>
+                        </select>
+                    </div>
+                    <div class="search-field">
+                        <label for="hero-pickup">Pickup Date</label>
+                        <input type="date" id="hero-pickup" name="pickup">
+                    </div>
+                    <button type="submit" class="search-btn">Find Bikes</button>
+                </form>
+
+                <ul class="hero-points">
+                    <li>No hidden charges</li>
+                    <li>Free helmet</li>
+                    <li>Free cancellation</li>
+                </ul>
             </div>
         </section>
 
         <section class="featured-bikes" id="bikes">
             <div class="container">
                 <header class="header-block">
+                    <span class="eyebrow">Our Fleet</span>
                     <h2 class="section-title">Featured Bikes</h2>
-                    <div class="section-divider"></div>
-                    <p class="section-subtitle">Discover our most popular rides, perfectly maintained for your next adventure or daily commute.</p>
+                    <p class="section-subtitle">Our most popular rides, serviced before every trip and ready for your next adventure.</p>
                 </header>
 
                 <div class="bikes-grid">
 
                     <article class="bike-card">
+                        <span class="price-badge">&#8377;1,999<span>/day</span></span>
                         <div class="bike-img">
-                            <img src="images/honda-activa.png" alt="Honda Activa 6G scooter">
+                            <img src="images/vespa-gts-300.jpg" alt="Vespa GTS 300 scooter bike">
                         </div>
                         <div class="bike-info">
-                            <h3>Honda Activa 6G</h3>
+                            <h3>Vespa GTS 300</h3>
                             <div class="bike-type">
                                 <span class="type-tag">Scooter</span>
                             </div>
                             <div class="bike-specs">
                                 <div class="spec-item">
                                     <span class="spec-label">Engine</span>
-                                    <span class="spec-value">110 CC</span>
+                                    <span class="spec-value">278 CC</span>
                                 </div>
                                 <div class="spec-item">
                                     <span class="spec-label">Mileage</span>
-                                    <span class="spec-value">45 kmpl</span>
+                                    <span class="spec-value">30 kmpl</span>
                                 </div>
                             </div>
-                            <a href="pages/bikes.html" class="book-btn">Book Now</a>
+                            <a href="pages/bikes.html?book=vespa-gts" class="book-btn">Book Now</a>
                         </div>
                     </article>
 
                     <article class="bike-card">
+                        <span class="price-badge">&#8377;6,999<span>/day</span></span>
                         <div class="bike-img">
-                            <img src="images/royal-enfield.png" alt="Royal Enfield Classic 350 cruiser">
+                            <img src="images/ducati-panigale.jpg" alt="Ducati 959 Panigale sports bike">
                         </div>
                         <div class="bike-info">
-                            <h3>Royal Enfield Classic</h3>
-                            <div class="bike-type">
-                                <span class="type-tag">Cruiser</span>
-                            </div>
-                            <div class="bike-specs">
-                                <div class="spec-item">
-                                    <span class="spec-label">Engine</span>
-                                    <span class="spec-value">350 CC</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Mileage</span>
-                                    <span class="spec-value">35 kmpl</span>
-                                </div>
-                            </div>
-                            <a href="pages/bikes.html" class="book-btn">Book Now</a>
-                        </div>
-                    </article>
-
-                    <article class="bike-card">
-                        <div class="bike-img">
-                            <img src="images/yamaha-fz.png" alt="Bajaj Pulsar 150 commuter bike">
-                        </div>
-                        <div class="bike-info">
-                            <h3>Bajaj Pulsar 150</h3>
-                            <div class="bike-type">
-                                <span class="type-tag">Commuter</span>
-                            </div>
-                            <div class="bike-specs">
-                                <div class="spec-item">
-                                    <span class="spec-label">Engine</span>
-                                    <span class="spec-value">150 CC</span>
-                                </div>
-                                <div class="spec-item">
-                                    <span class="spec-label">Mileage</span>
-                                    <span class="spec-value">50 kmpl</span>
-                                </div>
-                            </div>
-                            <a href="pages/bikes.html" class="book-btn">Book Now</a>
-                        </div>
-                    </article>
-
-                    <article class="bike-card">
-                        <div class="bike-img">
-                            <img src="images/ktm-duke.png" alt="KTM Duke 200 sports bike">
-                        </div>
-                        <div class="bike-info">
-                            <h3>KTM Duke 200</h3>
+                            <h3>Ducati 959 Panigale</h3>
                             <div class="bike-type">
                                 <span class="type-tag">Sports</span>
                             </div>
                             <div class="bike-specs">
                                 <div class="spec-item">
                                     <span class="spec-label">Engine</span>
-                                    <span class="spec-value">200 CC</span>
+                                    <span class="spec-value">955 CC</span>
                                 </div>
                                 <div class="spec-item">
                                     <span class="spec-label">Mileage</span>
-                                    <span class="spec-value">35 kmpl</span>
+                                    <span class="spec-value">16 kmpl</span>
                                 </div>
                             </div>
-                            <a href="pages/bikes.html" class="book-btn">Book Now</a>
+                            <a href="pages/bikes.html?book=panigale-959" class="book-btn">Book Now</a>
                         </div>
                     </article>
 
+                    <article class="bike-card">
+                        <span class="price-badge">&#8377;7,499<span>/day</span></span>
+                        <div class="bike-img">
+                            <img src="images/harley-fat-boy.jpg" alt="Harley-Davidson Fat Boy cruiser bike">
+                        </div>
+                        <div class="bike-info">
+                            <h3>Harley-Davidson Fat Boy</h3>
+                            <div class="bike-type">
+                                <span class="type-tag">Cruiser</span>
+                            </div>
+                            <div class="bike-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Engine</span>
+                                    <span class="spec-value">1584 CC</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value">18 kmpl</span>
+                                </div>
+                            </div>
+                            <a href="pages/bikes.html?book=fat-boy" class="book-btn">Book Now</a>
+                        </div>
+                    </article>
+
+                    <article class="bike-card">
+                        <span class="price-badge">&#8377;7,999<span>/day</span></span>
+                        <div class="bike-img">
+                            <img src="images/bmw-r1250gs.jpg" alt="BMW R 1250 GS adventure bike">
+                        </div>
+                        <div class="bike-info">
+                            <h3>BMW R 1250 GS</h3>
+                            <div class="bike-type">
+                                <span class="type-tag">Adventure</span>
+                            </div>
+                            <div class="bike-specs">
+                                <div class="spec-item">
+                                    <span class="spec-label">Engine</span>
+                                    <span class="spec-value">1254 CC</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Mileage</span>
+                                    <span class="spec-value">20 kmpl</span>
+                                </div>
+                            </div>
+                            <a href="pages/bikes.html?book=r1250gs" class="book-btn">Book Now</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="view-all">
+                    <a href="pages/bikes.html" class="btn-secondary">View all bikes &rarr;</a>
                 </div>
             </div>
         </section>
@@ -167,26 +207,30 @@
                 <div class="combined-grid">
 
                     <div class="steps-col">
+                        <span class="eyebrow">Simple Process</span>
                         <h2>How It Works</h2>
 
                         <div class="step-item">
+                            <span class="step-num">1</span>
                             <div class="step-text">
                                 <h3>Find Your Ride</h3>
-                                <p>Search by location and date to see available bikes near you.</p>
+                                <p>Pick your city and dates to see bikes available near you.</p>
                             </div>
                         </div>
 
                         <div class="step-item">
+                            <span class="step-num">2</span>
                             <div class="step-text">
-                                <h3>Book &amp; Pay Securely</h3>
-                                <p>Complete your reservation with our transparent, secure checkout process.</p>
+                                <h3>Book in Seconds</h3>
+                                <p>See the full price upfront and confirm your booking instantly.</p>
                             </div>
                         </div>
 
                         <div class="step-item">
+                            <span class="step-num">3</span>
                             <div class="step-text">
-                                <h3>Unlock &amp; Go</h3>
-                                <p>Pick up your bike at the hub, or use the app for instant unlock.</p>
+                                <h3>Pick Up &amp; Ride</h3>
+                                <p>Collect your bike at the hub with your licence and hit the road.</p>
                             </div>
                         </div>
                     </div>
@@ -196,7 +240,7 @@
 
                         <div class="why-item">
                             <h4><span class="why-dot"></span> Certified Maintenance</h4>
-                            <p>Every bike undergoes a rigorous 20-point safety check before every rental.</p>
+                            <p>Every bike goes through a 20-point safety check before every rental.</p>
                         </div>
 
                         <div class="why-item">
@@ -229,56 +273,71 @@
         <section class="popular-cities" id="cities">
             <div class="container">
                 <header class="header-block">
+                    <span class="eyebrow">Locations</span>
                     <h2 class="section-title">Popular Cities</h2>
-                    <div class="section-divider"></div>
-                    <p class="section-subtitle">We're available in 5+ cities across India</p>
+                    <p class="section-subtitle">Pick a city to see the bikes available there.</p>
                 </header>
 
                 <ul class="cities-grid">
 
                     <li class="city-card">
-                        <img src="images/chandigarh.png" alt="Chandigarh city skyline" class="city-img">
-                        <div class="scrim-layer"></div>
-                        <div class="city-text">
-                            <h3 class="city-label">Chandigarh</h3>
-                            <span class="inventory-metric">Bikes available: 5+</span>
-                        </div>
+                        <a href="pages/bikes.html?city=chandigarh" class="city-link">
+                            <img src="images/chandigarh.png" alt="Chandigarh city skyline" class="city-img">
+                            <div class="scrim-layer"></div>
+                            <div class="city-text">
+                                <h3 class="city-label">Chandigarh</h3>
+                                <span class="inventory-metric">6 bikes available</span>
+                                <span class="city-cta">Explore &rarr;</span>
+                            </div>
+                        </a>
                     </li>
 
                     <li class="city-card">
-                        <img src="images/mohali.jpg" alt="Mohali city view" class="city-img">
-                        <div class="scrim-layer"></div>
-                        <div class="city-text">
-                            <h3 class="city-label">Mohali</h3>
-                            <span class="inventory-metric">Bikes available: 15+</span>
-                        </div>
+                        <a href="pages/bikes.html?city=mohali" class="city-link">
+                            <img src="images/mohali.jpg" alt="Mohali city view" class="city-img">
+                            <div class="scrim-layer"></div>
+                            <div class="city-text">
+                                <h3 class="city-label">Mohali</h3>
+                                <span class="inventory-metric">5 bikes available</span>
+                                <span class="city-cta">Explore &rarr;</span>
+                            </div>
+                        </a>
                     </li>
 
                     <li class="city-card">
-                        <img src="images/delhi.png" alt="Delhi city view" class="city-img">
-                        <div class="scrim-layer"></div>
-                        <div class="city-text">
-                            <h3 class="city-label">Delhi</h3>
-                            <span class="inventory-metric">Bikes available: 8+</span>
-                        </div>
+                        <a href="pages/bikes.html?city=delhi" class="city-link">
+                            <img src="images/delhi.png" alt="Delhi city view" class="city-img">
+                            <div class="scrim-layer"></div>
+                            <div class="city-text">
+                                <h3 class="city-label">Delhi</h3>
+                                <span class="inventory-metric">6 bikes available</span>
+                                <span class="city-cta">Explore &rarr;</span>
+                            </div>
+                        </a>
                     </li>
 
                     <li class="city-card">
-                        <img src="images/manali.png" alt="Manali mountain landscape" class="city-img">
-                        <div class="scrim-layer"></div>
-                        <div class="city-text">
-                            <h3 class="city-label">Manali</h3>
-                            <span class="inventory-metric">Bikes available: 6+</span>
-                        </div>
+                        <a href="pages/bikes.html?city=manali" class="city-link">
+                            <img src="images/manali.png" alt="Manali mountain landscape" class="city-img">
+                            <div class="scrim-layer"></div>
+                            <div class="city-text">
+                                <h3 class="city-label">Manali</h3>
+                                <span class="inventory-metric">3 bikes available</span>
+                                <span class="city-cta">Explore &rarr;</span>
+                            </div>
+                        </a>
                     </li>
 
                     <li class="city-card">
-                        <img src="images/goa.png" alt="Goa beach landscape" class="city-img">
-                        <div class="scrim-layer"></div>
-                        <div class="city-text">
-                            <h3 class="city-label">Goa</h3>
-                            <span class="inventory-metric">Bikes available: 15+</span>
-                        </div>
+                        <a href="pages/bikes.html?city=goa" class="city-link">
+                            <img src="images/goa.png" alt="Goa beach landscape" class="city-img">
+                            <div class="scrim-layer"></div>
+                            <div class="city-text">
+                                <h3 class="city-label">Goa</h3>
+                                <span class="inventory-metric">5 bikes available</span>
+                                <span class="city-cta">Explore &rarr;</span>
+                            </div>
+                        </a>
                     </li>
 
                 </ul>
@@ -288,8 +347,8 @@
         <section class="testimonials" id="testimonials">
             <div class="container">
                 <header class="header-block">
+                    <span class="eyebrow">Reviews</span>
                     <h2 class="section-title">What Riders Say</h2>
-                    <div class="section-divider"></div>
                     <p class="section-subtitle">Thousands of happy riders across India trust BikeGlide every day.</p>
                 </header>
 
@@ -300,7 +359,7 @@
                             <span class="star-badge">★ 5.0</span>
                             <span class="rating-label">Excellent</span>
                         </div>
-                        <p class="review-text">"Rented a Royal Enfield for my Manali trip — the bike was spotless and well-maintained. The pickup was seamless. Highly recommend BikeGlide!"</p>
+                        <p class="review-text">"Took the BMW R 1250 GS on my Manali trip. The bike was spotless and well-maintained, and pickup was seamless. Highly recommend BikeGlide!"</p>
                         <div class="reviewer-meta">
                             <div class="avatar-circle" aria-hidden="true">AR</div>
                             <div class="reviewer-details">
@@ -315,7 +374,7 @@
                             <span class="star-badge">★ 4.8</span>
                             <span class="rating-label">Excellent</span>
                         </div>
-                        <p class="review-text">"Used the Honda Activa for my daily commute in Chandigarh for a week. Super affordable, easy booking, and great customer service."</p>
+                        <p class="review-text">"Used the Vespa GTS around Chandigarh for a week. Stylish, comfortable, easy booking, and great customer service."</p>
                         <div class="reviewer-meta">
                             <div class="avatar-circle" aria-hidden="true">PS</div>
                             <div class="reviewer-details">
@@ -330,7 +389,7 @@
                             <span class="star-badge">★ 5.0</span>
                             <span class="rating-label">Excellent</span>
                         </div>
-                        <p class="review-text">"Exploring Goa on a KTM Duke was an unforgettable experience. The 24/7 support gave me confidence throughout my ride. Will book again!"</p>
+                        <p class="review-text">"Cruising Goa on a Harley Fat Boy was unforgettable. The 24/7 support gave me confidence throughout my ride. Will book again!"</p>
                         <div class="reviewer-meta">
                             <div class="avatar-circle" aria-hidden="true">KM</div>
                             <div class="reviewer-details">
@@ -344,14 +403,22 @@
             </div>
         </section>
 
+        <!-- Text and button are swapped by js/main.js when the user is signed in -->
+        <section class="cta-band">
+            <div class="container">
+                <h2 id="cta-title">Ready to ride?</h2>
+                <p id="cta-text">Create a free account and book your first bike in under a minute.</p>
+                <a href="pages/signin.html#signup" class="btn-secondary" id="cta-btn">Create Free Account</a>
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer" id="contact-footer">
         <div class="container">
             <div class="footer-content">
-
                 <div class="brand-block">
-                    <p class="footer-brand">BikeGlide</p>
+                    <p class="footer-brand">Bike<span>Glide</span></p>
                     <p class="footer-tagline">India's trusted two-wheeler rental platform. Ride clean, ride safe.</p>
                 </div>
 
@@ -360,32 +427,34 @@
                         <h4>Quick Links</h4>
                         <a href="home.html">Home</a>
                         <a href="pages/bikes.html">Browse Bikes</a>
+                        <a href="pages/list-bike.html">List Your Bike</a>
                         <a href="pages/about.html">About Us</a>
                         <a href="pages/contact.html">Contact</a>
                     </div>
                     <div class="footer-col">
                         <h4>Account</h4>
                         <a href="pages/signin.html">Sign In</a>
-                        <a href="pages/signin.html">Sign Up</a>
+                        <a href="pages/signin.html#signup">Sign Up</a>
+                        <a href="pages/bookings.html">My Bookings</a>
                         <a href="pages/logout.html">Logout</a>
                     </div>
                     <div class="footer-col">
                         <h4>Cities</h4>
-                        <a href="pages/bikes.html">Chandigarh</a>
-                        <a href="pages/bikes.html">Delhi</a>
-                        <a href="pages/bikes.html">Goa</a>
-                        <a href="pages/bikes.html">Manali</a>
+                        <a href="pages/bikes.html?city=chandigarh">Chandigarh</a>
+                        <a href="pages/bikes.html?city=delhi">Delhi</a>
+                        <a href="pages/bikes.html?city=goa">Goa</a>
+                        <a href="pages/bikes.html?city=manali">Manali</a>
                     </div>
                 </nav>
-
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 BikeGlide Technologies Pvt. Ltd. &mdash; Academic Project &mdash; Team 21, Chitkara University. All rights reserved.</p>
+                <p>&copy; 2026 BikeGlide Technologies Pvt. Ltd. &mdash; Academic Project &mdash; Team 21, Chitkara University.</p>
             </div>
         </div>
     </footer>
 
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

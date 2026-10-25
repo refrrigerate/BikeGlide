@@ -1,26 +1,24 @@
 .popular-cities {
-    padding: 44px 0;
-    background: #110703;
+    padding: 64px 0;
 }
 
 .cities-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 16px;
 }
 
 .city-card {
     position: relative;
-    border-radius: 14px;
+    border-radius: var(--radius);
     overflow: hidden;
-    height: 200px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-    cursor: pointer;
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    height: 210px;
+    box-shadow: var(--shadow);
 }
 
-.city-card:hover {
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+.city-link {
+    display: block;
+    height: 100%;
 }
 
 .city-img {
@@ -37,8 +35,7 @@
 .scrim-layer {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 40%, rgba(15, 23, 42, 0.88) 100%);
-    pointer-events: none;
+    background: linear-gradient(180deg, transparent 35%, rgba(15, 23, 42, 0.9) 100%);
 }
 
 .city-text {
@@ -46,23 +43,31 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 20px 16px;
-    z-index: 2;
+    padding: 18px;
     display: flex;
     flex-direction: column;
-    gap: 2px;
 }
 
 .city-label {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #ffffff;
-    letter-spacing: -0.2px;
 }
 
 .inventory-metric {
     font-size: 0.8rem;
-    font-weight: 500;
+    color: #e2e8f0;
+}
+
+.city-cta {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fdba74;
+    margin-top: 4px;
+    transition: color 0.2s ease;
+}
+
+.city-card:hover .city-cta {
     color: #ffffff;
 }
 
@@ -73,27 +78,19 @@
 }
 
 @media (min-width: 768px) {
-    .popular-cities {
-        padding: 70px 0;
-    }
-
     .cities-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 18px;
     }
 
     .city-card {
-        height: 240px;
-    }
-
-    .city-label {
-        font-size: 1.15rem;
+        height: 250px;
     }
 }
 
 @media (min-width: 1024px) {
     .popular-cities {
-        padding: 90px 0;
+        padding: 96px 0;
     }
 
     .cities-grid {
@@ -101,6 +98,6 @@
     }
 
     .city-card {
-        height: 270px;
+        height: 290px;
     }
 }

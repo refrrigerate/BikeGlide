@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BikeGlide</title>
+    <title>About Us | BikeGlide</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/navbar.css">
@@ -19,7 +19,7 @@
 
     <nav class="navbar" id="navbar">
         <div class="container">
-            <a href="../home.html" class="nav-logo">BikeGlide</a>
+            <a href="../home.html" class="nav-logo">Bike<span>Glide</span></a>
 
             <button type="button" id="nav-hamburger-btn" class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
                 <span></span>
@@ -31,11 +31,13 @@
                 <div class="nav-center">
                     <a href="../home.html">Home</a>
                     <a href="bikes.html">Browse Bikes</a>
+                    <a href="list-bike.html">List Your Bike</a>
                     <a href="about.html" class="active">About Us</a>
                     <a href="contact.html">Contact</a>
                 </div>
                 <div class="nav-right">
                     <a href="signin.html" class="nav-signin">Sign In</a>
+                    <a href="signin.html#signup" class="nav-btn">Get Started</a>
                 </div>
             </div>
         </div>
@@ -50,19 +52,19 @@
             </div>
         </header>
 
-        <section class="section-padded" aria-label="BikeGlide statistics">
+        <section class="stats-overlap" aria-label="BikeGlide statistics">
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <h3>500+</h3>
+                        <h3 data-count="500" data-suffix="+">500+</h3>
                         <p>Bikes Available</p>
                     </div>
                     <div class="stat-card">
-                        <h3>10+</h3>
+                        <h3 data-count="10" data-suffix="+">10+</h3>
                         <p>Cities Covered</p>
                     </div>
                     <div class="stat-card">
-                        <h3>10K+</h3>
+                        <h3 data-count="10" data-suffix="K+">10K+</h3>
                         <p>Happy Riders</p>
                     </div>
                     <div class="stat-card">
@@ -92,8 +94,8 @@
                         <h2>Our Mission</h2>
                         <p>
                             To democratise two-wheel mobility across India by providing a reliable,
-                            transparent, and rider-first bike rental experience — from scooters for
-                            daily commuters to cruisers for weekend adventurers.
+                            transparent, and rider-first bike rental experience — from nimble Italian
+                            scooters to superbikes, cruisers and adventure tourers.
                         </p>
                         <p>
                             We believe every journey deserves a well-maintained bike, fair pricing,
@@ -142,7 +144,7 @@
                     </aside>
                 </div>
 
-                <div class="about-grid" style="padding-top: 0;">
+                <div class="about-grid">
                     <div class="about-text">
                         <h2>Why BikeGlide?</h2>
                         <p>
@@ -186,6 +188,7 @@
                     and power a connected ecosystem where bike owners, riders, and service providers
                     come together on a single trusted platform.
                 </p>
+                <a href="bikes.html" class="btn-primary">Start Riding Today</a>
             </div>
         </section>
 
@@ -195,7 +198,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="brand-block">
-                    <p class="footer-brand">BikeGlide</p>
+                    <p class="footer-brand">Bike<span>Glide</span></p>
                     <p class="footer-tagline">India's trusted two-wheeler rental platform. Ride clean, ride safe.</p>
                 </div>
                 <nav class="footer-links" aria-label="Footer navigation">
@@ -203,26 +206,28 @@
                         <h4>Quick Links</h4>
                         <a href="../home.html">Home</a>
                         <a href="bikes.html">Browse Bikes</a>
+                        <a href="list-bike.html">List Your Bike</a>
                         <a href="about.html">About Us</a>
                         <a href="contact.html">Contact</a>
                     </div>
                     <div class="footer-col">
                         <h4>Account</h4>
                         <a href="signin.html">Sign In</a>
-                        <a href="signin.html">Sign Up</a>
+                        <a href="signin.html#signup">Sign Up</a>
+                        <a href="bookings.html">My Bookings</a>
                         <a href="logout.html">Logout</a>
                     </div>
                     <div class="footer-col">
                         <h4>Cities</h4>
-                        <a href="bikes.html">Chandigarh</a>
-                        <a href="bikes.html">Delhi</a>
-                        <a href="bikes.html">Goa</a>
-                        <a href="bikes.html">Manali</a>
+                        <a href="bikes.html?city=chandigarh">Chandigarh</a>
+                        <a href="bikes.html?city=delhi">Delhi</a>
+                        <a href="bikes.html?city=goa">Goa</a>
+                        <a href="bikes.html?city=manali">Manali</a>
                     </div>
                 </nav>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 BikeGlide Technologies Pvt. Ltd. &mdash; Academic Project &mdash; Team 21, Chitkara University. All rights reserved.</p>
+                <p>&copy; 2026 BikeGlide Technologies Pvt. Ltd. &mdash; Academic Project &mdash; Team 21, Chitkara University.</p>
             </div>
         </div>
     </footer>

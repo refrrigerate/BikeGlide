@@ -1,138 +1,118 @@
 .combined-section {
-    padding: 44px 0;
-    background: #110703;
+    padding: 64px 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 .combined-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 40px;
     align-items: center;
 }
 
 .steps-col h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 8px;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--text);
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
 }
 
 .step-item {
     display: flex;
     align-items: flex-start;
-    gap: 16px;
+    gap: 18px;
     padding: 18px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.step-item:last-child {
-    border-bottom: none;
-}
-
-.step-icon {
+.step-num {
     width: 46px;
     height: 46px;
     min-width: 46px;
-    border-radius: 12px;
+    border-radius: 14px;
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+    font-weight: 800;
+    font-size: 1.1rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.step-icon.blue {
-    background: rgba(59, 130, 246, 0.15);
-    color: #60a5fa;
-}
-
-.step-icon.purple {
-    background: rgba(124, 58, 237, 0.15);
-    color: #a78bfa;
-}
-
-.step-icon.orange {
-    background: rgba(217, 119, 6, 0.15);
-    color: #fbbf24;
-}
-
 .step-text h3 {
-    font-size: 1rem;
+    font-size: 1.02rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text);
     margin-bottom: 4px;
 }
 
 .step-text p {
-    font-size: 0.88rem;
-    color: #64748b;
-    line-height: 1.5;
+    font-size: 0.9rem;
+    color: var(--muted);
 }
 
 .why-card {
-    background: #121212;
-    border-radius: 16px;
-    padding: 26px 20px;
+    background: var(--navy);
+    border-radius: 22px;
+    padding: 32px 26px;
     color: #ffffff;
-    box-shadow: 0 16px 45px rgba(26, 35, 50, 0.15);
+    box-shadow: var(--shadow-lg);
 }
 
 .why-card h2 {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 22px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
 }
 
 .why-item {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .why-item h4 {
-    font-size: 0.95rem;
+    font-size: 0.98rem;
     font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .why-dot {
-    width: 7px;
-    height: 7px;
-    min-width: 7px;
-    background: #ffffff;
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    background: var(--primary);
     border-radius: 50%;
-    display: inline-block;
 }
 
 .why-item p {
-    font-size: 0.85rem;
+    font-size: 0.87rem;
     color: #94a3b8;
-    line-height: 1.5;
-    padding-left: 17px;
+    padding-left: 18px;
 }
 
 .why-stat {
-    margin-top: 28px;
+    margin-top: 26px;
     padding-top: 22px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
 }
 
 .why-text h3 {
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 800;
-    color: #ffffff;
     line-height: 1;
+    color: var(--primary);
     margin-bottom: 4px;
 }
 
 .why-text span {
-    font-size: 0.72rem;
+    font-size: 0.74rem;
     font-weight: 600;
     color: #94a3b8;
     text-transform: uppercase;
@@ -140,61 +120,31 @@
 }
 
 .stat-icon {
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    border: 2px solid rgba(67, 40, 24, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--primary);
     color: #ffffff;
-    background: rgba(67, 40, 24, 0.1);
-}
-
-@media (min-width: 768px) {
-    .combined-section {
-        padding: 70px 0;
-    }
-
-    .steps-col h2 {
-        font-size: 1.8rem;
-    }
-
-    .why-card {
-        padding: 36px 28px;
-        border-radius: 18px;
-    }
-
-    .why-text h3 {
-        font-size: 2.2rem;
-    }
 }
 
 @media (min-width: 1024px) {
     .combined-section {
-        padding: 90px 0;
+        padding: 96px 0;
     }
 
     .combined-grid {
         grid-template-columns: 1fr 1fr;
-        gap: 50px;
+        gap: 64px;
     }
 
     .steps-col h2 {
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
 
     .why-card {
-        padding: 44px 36px;
-        border-radius: 20px;
-    }
-
-    .why-card h2 {
-        font-size: 1.6rem;
-        margin-bottom: 30px;
-    }
-
-    .why-text h3 {
-        font-size: 2.4rem;
+        padding: 44px 38px;
     }
 }

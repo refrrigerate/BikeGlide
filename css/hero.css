@@ -1,111 +1,119 @@
 .hero {
     position: relative;
-    min-height: 420px;
+    /* Fill the whole screen so no white strip shows under the hero */
+    min-height: max(620px, 100vh);
+    min-height: max(620px, 100svh);
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
     overflow: hidden;
+    background: var(--navy);
 }
 
 .hero-bg {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 0;
 }
 
 .hero-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(26, 35, 50, 0.72) 0%, rgba(26, 35, 50, 0.55) 100%);
-    z-index: 1;
+    inset: 0;
+    background: linear-gradient(100deg, rgba(15, 23, 42, 0.92) 0%, rgba(15, 23, 42, 0.7) 50%, rgba(15, 23, 42, 0.3) 100%);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    padding: 100px 5vw 28px;
-    max-width: 45rem;
-    width: 100%;
+    /* Top/bottom only, so the .container side padding still applies */
+    padding-top: 120px;
+    padding-bottom: 56px;
+}
+
+.hero-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fed7aa;
+    background: rgba(249, 115, 22, 0.18);
+    border: 1px solid rgba(249, 115, 22, 0.4);
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
 }
 
 .hero-content h1 {
-    font-size: 1.7rem;
+    font-size: 2.2rem;
     font-weight: 800;
     color: #ffffff;
-    margin-bottom: 14px;
-    line-height: 1.15;
-    letter-spacing: -0.8px;
+    margin-bottom: 16px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    max-width: 640px;
+}
+
+.hero-content h1 span {
+    color: var(--primary);
 }
 
 .hero-content p {
-    font-size: 0.94rem;
-    color: #e2e8f0;
+    font-size: 1rem;
+    color: #cbd5e1;
     margin-bottom: 28px;
-    line-height: 1.6;
+    max-width: 520px;
 }
 
-.hero-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: #ffffff;
-    color: #121212;
-    font-family: inherit;
-    font-size: 0.92rem;
-    font-weight: 700;
-    padding: 14px 32px;
-    border-radius: 999px;
-    transition: background 0.25s ease, transform 0.2s ease;
-    min-height: 48px;
-    margin-bottom: 8px;
-}
-
-.hero-btn:hover {
-    background: #e2e8f0;
-    transform: translateY(-2px);
-}
-
+/* Search box */
 .hero-search {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    background: #110703;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 12px;
-    padding: 8px;
-    max-width: 41.25rem; margin: 0 auto;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+    gap: 8px;
+    background: var(--surface);
+    border-radius: 18px;
+    padding: 10px;
+    max-width: 640px;
+    box-shadow: var(--shadow-lg);
 }
 
 .search-field {
     flex: 1;
-    padding: 8px 16px;
+    padding: 6px 14px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    text-align: left;
-}
-
-.search-field:last-of-type {
-    border-bottom: none;
+    border-radius: 12px;
+    background: var(--surface-alt);
 }
 
 .search-field label {
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     font-weight: 700;
-    color: #94a3b8;
+    color: var(--muted);
     text-transform: uppercase;
     letter-spacing: 0.6px;
-    margin-bottom: 2px;
+}
+
+.field-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.locate-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.locate-btn:hover {
+    text-decoration: underline;
 }
 
 .search-field select,
@@ -113,94 +121,63 @@
     border: none;
     outline: none;
     font-family: inherit;
-    font-size: 0.88rem;
-    font-weight: 500;
-    color: #ffffff;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--text);
     background: transparent;
     width: 100%;
+    min-height: 30px;
     cursor: pointer;
 }
 
 .search-btn {
-    background: #121212;
+    background: var(--primary);
     color: #ffffff;
-    padding: 12px 28px;
+    padding: 0 28px;
     border: none;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 0.9rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.25s ease, transform 0.2s ease;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    min-height: 48px;
-    width: 100%;
-    margin-top: 4px;
+    min-height: 54px;
+    transition: background 0.2s ease;
 }
 
 .search-btn:hover {
-    background: #2b394e;
-    transform: translateY(-1px);
+    background: var(--primary-dark);
+}
+
+.hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    margin-top: 22px;
+    color: #cbd5e1;
+    font-size: 0.85rem;
+}
+
+.hero-points li::before {
+    content: '\2713';
+    color: var(--primary);
+    font-weight: 700;
+    margin-right: 6px;
 }
 
 @media (min-width: 768px) {
     .hero {
-        min-height: 480px;
-    }
-
-    .hero-content {
-        padding: 116px 20px 36px;
+        min-height: max(640px, 100vh);
+        min-height: max(640px, 100svh);
     }
 
     .hero-content h1 {
-        font-size: 2.4rem;
+        font-size: 3.4rem;
     }
 
     .hero-content p {
-        font-size: 1rem;
-        margin-bottom: 32px;
+        font-size: 1.1rem;
     }
 
     .hero-search {
         flex-direction: row;
-        align-items: stretch;
-    }
-
-    .search-field {
-        border-bottom: none;
-        border-right: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .search-field:last-of-type {
-        border-right: none;
-    }
-
-    .search-btn {
-        width: auto;
-        margin-top: 0;
-        align-self: center;
-    }
-}
-
-@media (min-width: 1024px) {
-    .hero {
-        min-height: 520px;
-    }
-
-    .hero-content {
-        padding: 120px 20px 40px;
-    }
-
-    .hero-content h1 {
-        font-size: 3rem;
-    }
-
-    .hero-content p {
-        font-size: 1.02rem;
-        margin-bottom: 36px;
     }
 }

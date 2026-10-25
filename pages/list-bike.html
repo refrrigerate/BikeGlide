@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Your Bike | BikeGlide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/bikes.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/list-bike.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="../home.html" class="nav-logo">Bike<span>Glide</span></a>
+
+            <button type="button" id="nav-hamburger-btn" class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-center">
+                    <a href="../home.html">Home</a>
+                    <a href="bikes.html">Browse Bikes</a>
+                    <a href="list-bike.html" class="active">List Your Bike</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-right">
+                    <a href="signin.html" class="nav-signin">Sign In</a>
+                    <a href="signin.html#signup" class="nav-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-main">
+
+        <header class="page-hero">
+            <div class="container">
+                <h1>List Your Bike</h1>
+                <p id="listing-greeting">Earn money from your bike when you are not riding it. Listing is free.</p>
+            </div>
+        </header>
+
+        <section class="section-padded">
+            <div class="container listing-wrap">
+
+                <div class="stats-grid bookings-stats">
+                    <div class="stat-card">
+                        <h3 id="stat-listed">0</h3>
+                        <p>Bikes Listed</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="stat-rentals">0</h3>
+                        <p>Times Rented</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="stat-earned">&#8377;0</h3>
+                        <p>Total Earned</p>
+                    </div>
+                </div>
+
+                <div class="listing-grid">
+                    <form class="contact-form" id="listing-form" novalidate>
+                        <h2>Bike Details</h2>
+                        <p class="form-intro">Your bike shows up on Browse Bikes as soon as you publish it.</p>
+
+                        <p class="form-msg" id="listing-msg" role="alert"></p>
+
+                        <fieldset>
+                            <legend>About the bike</legend>
+
+                            <div class="form-group">
+                                <label for="listing-name">Bike Name</label>
+                                <input type="text" id="listing-name" maxlength="40" placeholder="e.g. Triumph Street Triple 765">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="listing-type">Category</label>
+                                    <select id="listing-type">
+                                        <option value="">Select a category</option>
+                                        <option value="scooter">Scooter</option>
+                                        <option value="adventure">Adventure</option>
+                                        <option value="cruiser">Cruiser</option>
+                                        <option value="sports">Sports</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="listing-price">Price per Day (&#8377;)</label>
+                                    <input type="number" id="listing-price" min="199" max="19999" placeholder="e.g. 4999">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="listing-engine">Engine (CC)</label>
+                                    <input type="number" id="listing-engine" min="50" max="2500" placeholder="e.g. 765">
+                                </div>
+                                <div class="form-group">
+                                    <label for="listing-mileage">Mileage (kmpl)</label>
+                                    <input type="number" id="listing-mileage" min="10" max="120" placeholder="e.g. 20">
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Where can riders pick it up?</legend>
+                            <div class="city-chips" id="listing-cities">
+                                <label class="city-chip"><input type="checkbox" value="chandigarh"><span>Chandigarh</span></label>
+                                <label class="city-chip"><input type="checkbox" value="mohali"><span>Mohali</span></label>
+                                <label class="city-chip"><input type="checkbox" value="delhi"><span>Delhi</span></label>
+                                <label class="city-chip"><input type="checkbox" value="manali"><span>Manali</span></label>
+                                <label class="city-chip"><input type="checkbox" value="goa"><span>Goa</span></label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Photo (optional)</legend>
+                            <div class="form-group">
+                                <label for="listing-photo">Upload a clear photo of your bike</label>
+                                <input type="file" id="listing-photo" accept="image/*">
+                                <span class="char-count">JPG or PNG. Without a photo we show a placeholder.</span>
+                            </div>
+                        </fieldset>
+
+                        <label class="confirm-check">
+                            <input type="checkbox" id="listing-confirm">
+                            <span>I own this bike and it has a valid RC, insurance and PUC certificate.</span>
+                        </label>
+
+                        <button type="submit" class="btn-primary">Publish Listing</button>
+                    </form>
+
+                    <aside class="listing-preview">
+                        <p class="preview-label">Live preview</p>
+                        <!-- Filled in by js/main.js -->
+                        <div id="listing-preview"></div>
+                    </aside>
+                </div>
+
+                <div class="bookings-head">
+                    <div>
+                        <h2>Your Listed Bikes</h2>
+                        <p>Pause a bike to stop new bookings. Bikes with upcoming rentals cannot be removed.</p>
+                    </div>
+                </div>
+
+                <!-- Filled in by js/main.js -->
+                <div class="booking-list" id="my-listings"></div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="brand-block">
+                    <p class="footer-brand">Bike<span>Glide</span></p>
+                    <p class="footer-tagline">India's trusted two-wheeler rental platform. Ride clean, ride safe.</p>
+                </div>
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <a href="../home.html">Home</a>
+                        <a href="bikes.html">Browse Bikes</a>
+                        <a href="list-bike.html">List Your Bike</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Account</h4>
+                        <a href="signin.html">Sign In</a>
+                        <a href="signin.html#signup">Sign Up</a>
+                        <a href="bookings.html">My Bookings</a>
+                        <a href="logout.html">Logout</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Cities</h4>
+                        <a href="bikes.html?city=chandigarh">Chandigarh</a>
+                        <a href="bikes.html?city=delhi">Delhi</a>
+                        <a href="bikes.html?city=goa">Goa</a>
+                        <a href="bikes.html?city=manali">Manali</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BikeGlide Technologies Pvt. Ltd. &mdash; Academic Project &mdash; Team 21, Chitkara University.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

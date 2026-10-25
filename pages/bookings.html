@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings | BikeGlide</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/bikes.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="../home.html" class="nav-logo">Bike<span>Glide</span></a>
+
+            <button type="button" id="nav-hamburger-btn" class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-menu" id="nav-menu">
+                <div class="nav-center">
+                    <a href="../home.html">Home</a>
+                    <a href="bikes.html">Browse Bikes</a>
+                    <a href="list-bike.html">List Your Bike</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="nav-right">
+                    <a href="signin.html" class="nav-signin">Sign In</a>
+                    <a href="signin.html#signup" class="nav-btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="page-main">
+
+        <header class="page-hero">
+            <div class="container">
+                <h1>My Bookings</h1>
+                <p id="bookings-greeting">Your rides, all in one place.</p>
+            </div>
+        </header>
+
+        <section class="section-padded">
+            <div class="container bookings-wrap">
+
+                <div class="stats-grid bookings-stats">
+                    <div class="stat-card">
+                        <h3 id="stat-total">0</h3>
+                        <p>Total Bookings</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="stat-upcoming">0</h3>
+                        <p>Upcoming / Active</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="stat-spent">&#8377;0</h3>
+                        <p>Total Spent</p>
+                    </div>
+                </div>
+
+                <div class="bookings-head">
+                    <div>
+                        <h2>Booking History</h2>
+                        <p>Upcoming bookings can be cancelled for free.</p>
+                    </div>
+                    <a href="bikes.html" class="btn-primary">+ New Booking</a>
+                </div>
+
+                <!-- Filled in by js/main.js -->
+                <div class="booking-list" id="booking-list"></div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="brand-block">
+                    <p class="footer-brand">Bike<span>Glide</span></p>
+                    <p class="footer-tagline">India's trusted two-wheeler rental platform. Ride clean, ride safe.</p>
+                </div>
+                <nav class="footer-links" aria-label="Footer navigation">
+                    <div class="footer-col">
+                        <h4>Quick Links</h4>
+                        <a href="../home.html">Home</a>
+                        <a href="bikes.html">Browse Bikes</a>
+                        <a href="list-bike.html">List Your Bike</a>
+                        <a href="about.html">About Us</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Account</h4>
+                        <a href="signin.html">Sign In</a>
+                        <a href="signin.html#signup">Sign Up</a>
+                        <a href="bookings.html">My Bookings</a>
+                        <a href="logout.html">Logout</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Cities</h4>
+                        <a href="bikes.html?city=chandigarh">Chandigarh</a>
+                        <a href="bikes.html?city=delhi">Delhi</a>
+                        <a href="bikes.html?city=goa">Goa</a>
+                        <a href="bikes.html?city=manali">Manali</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BikeGlide Technologies Pvt. Ltd. &mdash; Academic Project &mdash; Team 21, Chitkara University.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

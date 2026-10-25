@@ -1,60 +1,59 @@
 .testimonials {
-    padding: 44px 0;
-    background: #110703;
+    padding: 64px 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
 }
 
 .testimonials-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 20px;
 }
 
 .testimonial-card {
-    background: #111111;
-    border-radius: 16px;
-    padding: 24px 20px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--bg);
+    border-radius: var(--radius);
+    padding: 26px 22px;
+    border: 1px solid var(--border);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
 }
 
 .rating-stars {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 }
 
 .star-badge {
-    background: #121212;
-    color: #ffffff;
-    font-size: 0.78rem;
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+    font-size: 0.8rem;
     font-weight: 700;
-    padding: 3px 8px;
-    border-radius: 6px;
+    padding: 3px 10px;
+    border-radius: 999px;
 }
 
 .rating-label {
     font-size: 0.75rem;
     font-weight: 600;
-    color: #94a3b8;
+    color: var(--muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .review-text {
-    font-size: 0.92rem;
-    color: #e2e8f0;
-    line-height: 1.6;
-    margin-bottom: 24px;
+    font-size: 0.93rem;
+    color: var(--text-soft);
+    margin-bottom: 22px;
 }
 
 .reviewer-meta {
@@ -64,17 +63,16 @@
 }
 
 .avatar-circle {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: #1f1f1f;
+    background: var(--navy);
     color: #ffffff;
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .reviewer-details {
@@ -85,19 +83,15 @@
 .reviewer-name {
     font-size: 0.95rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text);
 }
 
 .reviewer-location {
-    font-size: 0.78rem;
-    color: #94a3b8;
+    font-size: 0.8rem;
+    color: var(--muted);
 }
 
 @media (min-width: 768px) {
-    .testimonials {
-        padding: 70px 0;
-    }
-
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -105,15 +99,11 @@
 
 @media (min-width: 1024px) {
     .testimonials {
-        padding: 90px 0;
+        padding: 96px 0;
     }
 
     .testimonials-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
-    }
-
-    .testimonial-card {
-        padding: 32px 26px;
     }
 }
