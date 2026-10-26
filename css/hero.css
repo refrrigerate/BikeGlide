@@ -100,6 +100,10 @@
     gap: 8px;
 }
 
+.field-head label {
+    white-space: nowrap;
+}
+
 .locate-btn {
     background: none;
     border: none;
@@ -110,6 +114,10 @@
     color: var(--primary-dark);
     cursor: pointer;
     white-space: nowrap;
+    /* Long results like "Chandigarh · 1 km away" shrink instead of wrapping the label */
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .locate-btn:hover {
